@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>chat</title>
+    <style>
+        * {
+            /* border: 1px solid white; */
+            font-size: 48px;
+        }
+        input:-webkit-autofill,
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            background-color: transparent!important;
+            background-image: none !important;
+            -webkit-box-shadow: 0 0 0 1000px black inset !important;
+            -webkit-text-fill-color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex flex-col justify-center items-center">
+    <div class="room-info flex justify-between mb-2 w-3/4">
+        <h3 class="room-name">Room name: <span id="room-name"></span></h3>
+        <h3 class="users w-auto">Total users: <span id="users"></span></h3>
+    </div>
+    <div class="chat-box border-2 rounded-sm border-white w-3/4 h-2/3 p-3 overflow-y-scroll">
+        <!-- <div class="message border bg-white text-black mb-1 p-1">
+            <p class="meta">Gary <span>11:42</span></p>
+            <p class="text">Lorem, ipsum. &#129409;</p>
+            <img src="imgs/test.jpg" width="300px" height="300px">
+        </div> -->
+    </div>
+    <form  action="" class="mt-2" id="chat-form">
+        <input type="text" id="input-message" class="input-style" placeholder="some words ...">
+        <a href=""><i class="far fa-laugh"></i></a>
+        <a href=""><i class="far fa-file-image"></i></a>
+        <button type="submit" class="border rounded bg-white text-black px-2">Send</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascripts/chat.js"></script>
+</body>
+</html>
