@@ -1,6 +1,6 @@
 # chatroom
 ## Demo
-http://18.116.177.114:8080/
+http://13.58.71.168/
 ## Tools
 Frontend : HTML、CSS、JavaScript <br>
 Backend : Node.js Express <br>
